@@ -30,23 +30,23 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                                 <div className="grid grid-cols-2 gap-12">
                                     <div className='mb-20'>
                                         <label className='block text-2xs text-white font-normal mb-12' htmlFor="">What’s your name?</label>
-                                        <input className='w-full h-50 rounded-md text-[#D8D8D8] px-24' type="text" placeholder='Type your full name' />
+                                        <input className='w-full h-40 sm:h-50 rounded-md text-[#D8D8D8] px-24' type="text" placeholder='Type your full name' />
                                     </div>
                                     <div className='mb-20'>
                                         <label className='block text-2xs text-white font-normal mb-12' htmlFor="">What’s your email?</label>
-                                        <input className='w-full h-50 rounded-md text-[#D8D8D8] px-24' type="text" placeholder='Type your main email' />
+                                        <input className='w-full h-40 sm:h-50 rounded-md text-[#D8D8D8] px-24' type="text" placeholder='Type your main email' />
                                     </div>
                                 </div>
                                 <div className='mb-20'>
                                         <label className='block text-2xs text-white font-normal mb-12' htmlFor="">What’s services are you looking for?</label>
-                                        <input className='w-full h-50 rounded-md text-[#D8D8D8] px-24' type="text" placeholder='Type your service name' />
+                                        <input className='w-full h-40 sm:h-50 rounded-md text-[#D8D8D8] px-24' type="text" placeholder='Type your service name' />
                                     </div>
-                                    <section>
+                                    <section className='mb-16'>
                                         <label className='block text-2xs text-white font-normal mb-12' htmlFor="">What’s services are you looking for?</label>
                                     <div className="flex items-stretch gap-12">
                                         {[...Array(3)]?.map((item, _index) => (
                                             <div key={_index} className='w-full h-auto bg-[#E4E4E733] rounded-md'>
-                                                <span className='block text-base text-white text-center font-semibold py-18'>$5k-10K</span>
+                                                <span className='block text-2xs sm:text-base text-white text-center font-semibold py-14 sm:py-18'>$5k-10K</span>
                                             </div>
                                         ))}
                                     </div>
@@ -56,7 +56,7 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                                         <textarea className='w-full min-h-[120px] rounded-md text-[#D8D8D8] py-18 px-24' type="text" placeholder='Tell us about your Project' />
                                     </div>
                                     <div className="flex">
-                                        <Button className='!w-fit !bg-[#E95018] text-white !h-60 lg:!h-72 uppercase md:!text-2xs px-26 md:px-36 ml-auto'>Get Started</Button>
+                                        <Button className='!w-fit !bg-[#E95018] text-white !h-46 sm:!h-60 lg:!h-72 uppercase md:!text-2xs px-26 md:px-36 ml-auto'>Get Started</Button>
                                     </div>
                             </div>
                             </div>}

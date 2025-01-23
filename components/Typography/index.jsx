@@ -1,6 +1,21 @@
 import Arrow from './Arrow'
 import ArrowUp from './ArrowUp'
 
+export const Logo = ({ className, children, ...props }) => {
+    return (
+        <button {...props} className={`${className} btn theme-btn bg-transparent transition-all delay-700 whitespace-nowrap`}>
+            <span class="btn-wrapper relative inline-block">
+                <span class="relative top-0 left-0 flex items-center gap-20 whitespace-nowrap">
+                  <img className="h-26 md:h-28" src="/assets/svg/logo-nav.svg" alt="Logo" />
+                </span>
+                <span class="absolute top-0 left-0 flex items-center gap-20 whitespace-nowrap">
+                    <img className="h-26 md:h-28" src="/assets/svg/logo-nav.svg" alt="Logo" />
+                </span>
+            </span>
+        </button>
+    )
+}
+
 export const H1 = ({ className, children, ...props }) => {
     return (
         <h1 {...props} className={`${className}  text-white font-bold text-[30px] md:text-[45px] leading-55 md:leading-60`}>

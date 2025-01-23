@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Sidebar from '../Sidebar';
 import { useState, useEffect } from 'react';
-import { Button } from "../Typography";
+import { Logo, Button } from "../Typography";
 
 const Index = () => {
   const [toggle, setToggle] = useState(false);
@@ -44,14 +44,14 @@ const Index = () => {
               {navItems?.map((item, index) => (
                 <li
                   key={index}
-                  className="text-base text-white font-normal transition-all cursor-pointer hover:underline hover:opacity-90"
+                  className="text-base text-white font-normal transition-all cursor-pointer hover:underline hover:text-[#E95018]"
                 >
                   <Link href={item?.link}>{item?.name}</Link>
                 </li>
               ))}
             </ul>
             <div className="flex items-center">
-              <span className="inline-block xs:hidden text-2xs text-white font-medium transition-all cursor-pointer hover:underline hover:opacity-90 mr-6">
+              <span className="inline-block xs:hidden text-2xs text-white font-medium transition-all cursor-pointer hover:underline hover:text-[#E95018] mr-6">
                 Get Started
               </span>
               <Button
