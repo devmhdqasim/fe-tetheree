@@ -51,8 +51,8 @@ const Index = () => {
               ))}
             </ul>
             <div className="flex items-center">
-              <span className="inline-block xs:hidden text-sm text-white font-medium transition-all cursor-pointer hover:underline hover:opacity-90 mr-6">
-                Register Now
+              <span className="inline-block xs:hidden text-2xs text-white font-medium transition-all cursor-pointer hover:underline hover:opacity-90 mr-6">
+                Get Started
               </span>
               <Button
                 arrow={false}

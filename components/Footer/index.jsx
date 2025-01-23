@@ -45,11 +45,11 @@ const Index = ({ }) => {
                             </div>
                         </div>
                         <div>
-                            <input className='w-full h-80 bg-black border border-[#18181B] text-[#52525B] text-2xs rounded-none pl-32 pr-16' type="text" placeholder='Email address' />
-                            <textarea className='w-full h-180 bg-black border border-[#18181B] text-[#52525B] text-2xs rounded-none pt-32 pl-32 pb-16 pr-16' type="text" placeholder='Your message' />
-                            <div className='group flex items-center justify-between w-fulll h-72 relative border-l border-[#F3722C] cursor-pointer py-24 px-32'>
+                            <input className='w-full h-80 bg-black border border-[#18181B] text-[#52525B] !outline-none !shadow-none text-2xs transition-all focus:!border-[#3a3a42] rounded-none pl-32 pr-16' type="text" placeholder='Email address' />
+                            <textarea className='w-full h-180 bg-black border !border-[#18181B] text-[#52525B] !outline-none !shadow-none transition-all focus:!border-[#3a3a42] text-2xs rounded-none pt-32 pl-32 pb-16 pr-16' type="text" placeholder='Your message' />
+                            <div className='group flex items-center justify-between w-fulll h-72 relative border-l !border-l-[#F3722C] transition-all hover:!border-[#3a3a42] cursor-pointer py-24 px-32'>
                                 <span className='text-xs text-white font-normal uppercase'>Send</span>
-                                <span className='relative flex items-center justify-center transition-all group-hover:translate-x-24 border border-transparent group-hover:border-white aspect-square rounded-full p-4'>
+                                <span className='relative flex items-center justify-center transition-all group-hover:translate-x-24 border border-transparent aspect-square rounded-full p-4'>
                                     <Arrow />
                                 </span>
                             </div>
