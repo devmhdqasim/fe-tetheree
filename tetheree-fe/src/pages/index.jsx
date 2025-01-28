@@ -1,6 +1,5 @@
 import Footer from '../../components/Footer'
 import Showcase from '../../components/Showcase'
-import ScrollToTop from '../../components/ScrollToTop'
 import IndustriesWrapper from '../../components/IndustriesPitch';
 import PitchPointsWrapper from '../../components/PitchPoints';
 import { Tab, H1, H2, H4, H5, H6, H3, Button } from "../../components/Typography";

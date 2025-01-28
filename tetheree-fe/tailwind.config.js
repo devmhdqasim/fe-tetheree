@@ -13,7 +13,6 @@ module.exports = {
       screens: {
         'xs': '460px',
         '2xl': '1240px',
-        '3xl': '1420px',
       },
       colors: {
         gray: '#717171',

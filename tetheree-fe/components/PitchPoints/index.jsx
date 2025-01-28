@@ -3,7 +3,7 @@ import { PitchPoint } from '../../components/Section'
 
 const Index = () => {
     return (
-        <div className="bg-theme relative z-10 pb-99">
+        <div className="bg-theme pb-99">
             <PitchPoint
                 number='01'
                 titleClassName='text-theme'

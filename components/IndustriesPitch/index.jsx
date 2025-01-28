@@ -60,10 +60,10 @@ const Index = () => {
                 subTitle='Our expertise spans a broad spectrum of industries, ensuring that no matter your field, we have the tools to drive your success:'
             >
                 <div className='mb-30'>
-                    <section className='flex items-baseline gap-16 flex-wrap'>
+                    <section className='flex items-stretch gap-16 flex-wrap xl:flex-nowrap'>
                         {['Logistics', 'Manufacturing', 'Education', 'Coaching', 'Property Management', 'Eco Travel', 'Concierge Services']?.map((item, _index) => (
                             <Tab key={_index} onClick={() => setSelectedIndustriesTab(item)} className={`${item == selectedIndustriesTab && '!bg-[#E95018] !border-white'} group border border-[#6F6F6F] hover:!bg-[#E95018] hover:!border-white rounded-none`}>
-                                <span className={`${item == selectedIndustriesTab && '!text-white'} text-[#6F6F6F] group-hover:text-white font-semibold text-sm`}>{item}</span>
+                                <span className={`${item == selectedIndustriesTab && '!text-white'} text-[#6F6F6F] group-hover:text-white font-semibold text-sm xl:text-base`}>{item}</span>
                             </Tab>
                         ))}
                     </section>
@@ -80,14 +80,14 @@ const Index = () => {
             <div className='relative'>
                 <div className="relative">
                 <IndustryWrapper
-                    titleClassName='text-theme !text-center mb-36'
+                    titleClassName='hidden sm:block text-theme !text-center mb-36'
                     title={selectedTab ?? 'Customized Integrations'}
                     subTitleClassName={'!text-center'}
                     containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto'}
                     btnClassName='bg-[#E95018] text-white uppercase md:h-72'
                 >
                     <div className=''>
-                        <section className='flex items-baseline justify-center gap-16 flex-wrap mx-auto mb-99'>
+                        <section className='flex items-baseline justify-center gap-16 flex-wrap mx-auto mb-54 md:mb-99'>
                             {['Customized Automations', 'Customized Integration', 'SaaS Offerings']?.map((item, _index) => (
                                 <Tab onClick={() => setSelectedTab(item)} key={_index} className={`${selectedTab == item && '!bg-[#E95018] !border-[#E95018]'} flex-grow border border-[#6F6F6F] hover:!bg-[#E95018] hover:!border-[#E95018] rounded-none`}>
                                     <span className={`${selectedTab == item && '!text-white'} hover:!text-white text-[#FAFAFA] font-normal text-md`}>{item}</span>
@@ -149,7 +149,7 @@ const Index = () => {
                     <div className='w-[320px] flex h-1 bg-[#E95018] mx-auto' />
                 </div>
                 </div>
-                <img className='absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 pointer-events-none' src="/assets/homepage-tabs-blur.svg" alt="" />
+                <img className='absolute top-0 left-2/4 -translate-x-2/4 pointer-events-none' src="/assets/homepage-tabs-blur.svg" alt="" />
             </div>
         </>
     )
