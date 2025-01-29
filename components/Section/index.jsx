@@ -73,7 +73,7 @@ export const VideoContent = ({ title, subTitle, subTitleClassName, btnTitle, tit
                         </div>
                     </div>
                     <div className='w-full relative max-w-full h-full'>
-                        <img className="w-full relative max-w-full h-full max-h-[400px] object-none z-10" src="/assets/video-content.svg" alt="" />
+                        <img className="w-full relative max-w-full h-full max-h-[400px] object-contain z-10" src="/assets/video-content.svg" alt="" />
                     </div>
                 </section>
             </div>
