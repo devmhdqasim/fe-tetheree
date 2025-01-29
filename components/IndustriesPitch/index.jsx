@@ -73,7 +73,7 @@ const Index = () => {
                         <H3 className={'!font-semibold mb-24'}>{selectedIndustriesTab}</H3>
                         <H6>Streamline your logistics operations with our AI-powered automation solutions. We specialize in optimizing supply chains, reducing costs, and improving efficiency.</H6>
                     </div>
-                    <img className='w-full md:w-full object-contain px-20 md:pr-0' src="/assets/logistics-graphic.svg" alt="" />
+                    <img className='w-full md:w-full object-none px-20 md:pr-0' src="/assets/logistics-graphic.svg" alt="" />
                 </section>
             </IndustryWrapper>
 
