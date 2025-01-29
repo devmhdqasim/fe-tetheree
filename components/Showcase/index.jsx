@@ -12,7 +12,7 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                                 <div className='relative z-10'>
                             <H5 className='hidden md:block text-white font-medium mb-16'>{supTitle ?? 'We Build Solution for the industry'}</H5>
                             <H1 data-scroll className='text-left pr-0 lg:pr-64 mb-16'>{title ?? `Custom software for team collaboration`}</H1>
-                            <H4 className='w-full text-left text-white mb-36 md:mb-64'>{subTitle ?? 'We specialize in connecting people through innovative processes, allowing humans to focus on what they do best.'}</H4>
+                            <H4 className='w-full text-left text-white pr-0 lg:pr-64 mb-36 md:mb-64'>{subTitle ?? 'We specialize in connecting people through innovative processes, allowing humans to focus on what they do best.'}</H4>
                             <div className='flex flex-wrap items-baseline gap-20 md:gap-3'>
                                 <Button className='!bg-[#E95018] text-white !h-60 lg:!h-72 uppercase md:!text-2xs px-26 md:px-36'>Get Started</Button>
                                 {secondaryBtn && <Button className='!bg-transparent text-white !h-60 lg:!h-72 uppercase md:!text-base px-26 md:px-36'>About Us</Button>}

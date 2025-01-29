@@ -33,7 +33,7 @@ const Index = () => {
                     {['Enterprise Resource Planning', 'Customer Relationship Managment', 'Content Managment System', 'Transportation Managment System', 'Learning Managment System']?.map((item, _index) => {
                         let word = item?.trim()?.split(" ")
                         return (
-                            <Tab key={_index} className={`${true && 'hover:!bg-white hover:!text-black'}`}>
+                            <Tab key={_index} className={`${true && 'hover:!bg-[#E95018] hover:!text-white'}`}>
                                 <span>{word?.[0]}</span>
                                 <span>{word?.slice(1)?.join(" ")}</span>
                             </Tab>
@@ -44,7 +44,7 @@ const Index = () => {
                     <H6 className='font-normal w-full text-left mb-30'>Additionally, we offer specialized platforms for diverse needs:</H6>
                     <section className='flex items-baseline gap-16 flex-wrap'>
                         {['Coaching Platform', 'Property Management Platform', 'Media Platform']?.map((item, _index) => (
-                            <Tab key={_index} className={`${true && 'hover:!bg-white hover:!text-black'}`}>
+                            <Tab key={_index} className={`${true && 'hover:!bg-[#E95018] hover:!text-white'}`}>
                                 <span>{item}</span>
                             </Tab>
                         ))}
@@ -73,20 +73,19 @@ const Index = () => {
                         <H3 className={'!font-semibold mb-24'}>{selectedIndustriesTab}</H3>
                         <H6>Streamline your logistics operations with our AI-powered automation solutions. We specialize in optimizing supply chains, reducing costs, and improving efficiency.</H6>
                     </div>
-                    <img className='w-full md:w-full px-20 md:pr-0' src="/assets/logistics-graphic.svg" alt="" />
+                    <img className='w-full md:w-full object-contain px-20 md:pr-0' src="/assets/logistics-graphic.svg" alt="" />
                 </section>
             </IndustryWrapper>
 
             <div className='relative'>
                 <div className="relative">
-                <IndustryWrapper
-                    titleClassName='hidden sm:block text-theme !text-center mb-36'
-                    title={selectedTab ?? 'Customized Integrations'}
-                    subTitleClassName={'!text-center'}
-                    containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto'}
-                    btnClassName='bg-[#E95018] text-white uppercase md:h-72'
-                >
-                    <div className=''>
+                    <IndustryWrapper
+                        titleClassName='text-theme !text-center mb-36'
+                        title={selectedTab ?? 'Customized Integrations'}
+                        subTitleClassName={'!text-center'}
+                        containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto'}
+                        btnClassName='bg-[#E95018] text-white uppercase md:h-72'
+                    >
                         <section className='flex items-baseline justify-center gap-16 flex-wrap mx-auto mb-54 md:mb-99'>
                             {['Customized Automations', 'Customized Integration', 'SaaS Offerings']?.map((item, _index) => (
                                 <Tab onClick={() => setSelectedTab(item)} key={_index} className={`${selectedTab == item && '!bg-[#E95018] !border-[#E95018]'} flex-grow border border-[#6F6F6F] hover:!bg-[#E95018] hover:!border-[#E95018] rounded-none`}>
@@ -120,34 +119,33 @@ const Index = () => {
                                 </section>
                             </div>
                         )}
-                    </div>
-                </IndustryWrapper>
-
-                {selectedTab == 'Customized Automations' && (
-                    <IndustryWrapper
-                        titleClassName='text-theme !text-center mb-36'
-                        title='Industries'
-                        subTitleClassName={'!text-center'}
-                        containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto -mt-36'}
-                        subTitle='Our automation solutions are tailor-made for a variety of industries, ensuring that you get the most out of your operations:'
-                        btnClassName='bg-[#E95018] text-white uppercase md:h-72'
-                    >
-                        <div className=''>
-                            <section className='flex items-stretch justify-center gap-16 flex-wrap lg:flex-nowrap mx-auto mb-99'>
-                                {['Supply Chain', 'Media', 'Coaching', 'Education']?.map((item, _index) => (
-                                    <Tab key={_index} className={`!min-w-[240px] ${false && '!bg-[#E95018] !border-white !text-white'} !h-auto flex-grow hover:!bg-[#E95018] hover:!border-white hover:!text-white pt-40 pb-26`}>
-                                        <img className='mb-24' src={`/assets/industries/industry-${++_index}.svg`} alt="" />
-                                        <span className={`text-[#FAFAFA] font-normal text-center text-md`}>{item}</span>
-                                    </Tab>
-                                ))}
-                            </section>
-                        </div>
                     </IndustryWrapper>
-                )}
 
-                <div className='bg-theme w-full pb-99'>
-                    <div className='w-[320px] flex h-1 bg-[#E95018] mx-auto' />
-                </div>
+                    {selectedTab == 'Customized Automations' && (
+                        <IndustryWrapper
+                            titleClassName='text-theme !text-center mb-36'
+                            title='Industries'
+                            subTitleClassName={'!text-center'}
+                            containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto -mt-36'}
+                            subTitle='Our automation solutions are tailor-made for a variety of industries, ensuring that you get the most out of your operations:'
+                            btnClassName='bg-[#E95018] text-white uppercase md:h-72'
+                        >
+                            <div className=''>
+                                <section className='flex items-stretch justify-center gap-16 flex-wrap lg:flex-nowrap mx-auto mb-99'>
+                                    {['Supply Chain', 'Media', 'Coaching', 'Education']?.map((item, _index) => (
+                                        <Tab key={_index} className={`!min-w-[240px] ${false && '!bg-[#E95018] !border-white !text-white'} !h-auto flex-grow hover:!bg-[#E95018] hover:!border-white hover:!text-white pt-40 pb-26`}>
+                                            <img className='mb-24' src={`/assets/industries/industry-${++_index}.svg`} alt="" />
+                                            <span className={`text-[#FAFAFA] font-normal text-center text-md`}>{item}</span>
+                                        </Tab>
+                                    ))}
+                                </section>
+                            </div>
+                        </IndustryWrapper>
+                    )}
+
+                    <div className='bg-theme w-full pb-99'>
+                        <div className='w-[320px] flex h-1 bg-[#E95018] mx-auto' />
+                    </div>
                 </div>
                 <img className='absolute top-0 left-2/4 -translate-x-2/4 pointer-events-none' src="/assets/homepage-tabs-blur.svg" alt="" />
             </div>

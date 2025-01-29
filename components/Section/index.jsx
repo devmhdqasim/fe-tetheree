@@ -49,7 +49,7 @@ export const IndustryWrapper = ({ title, subTitle, subTitleClassName, btnTitle, 
         <div className='bg-theme'>
             <div className="container flex flex-col mx-auto">
                 <section className={`${containerClassName} w-full flex flex-col justify-center py-46 px-20`}>
-                    <H2 className={`${titleClassName} font-semibold text-left mb-8`}>{title}</H2>
+                    {title && <H2 className={`${titleClassName} font-semibold text-left mb-8`}>{title}</H2>}
                     {subTitle && <H6 className={`${subTitleClassName} font-normal w-full text-left mb-36`}>{subTitle}</H6>}
                     {children}
                     {btnTitle && <Button className={`${btnClassName} !bg-[#E95018] w-fit !h-70 !text-md`}>{btnTitle}</Button>}
@@ -73,7 +73,7 @@ export const VideoContent = ({ title, subTitle, subTitleClassName, btnTitle, tit
                         </div>
                     </div>
                     <div className='w-full relative max-w-full h-full'>
-                        <img className="w-full relative max-w-full h-full max-h-[400px] object-cover z-10" src="/assets/video-content.svg" alt="" />
+                        <img className="w-full relative max-w-full h-full max-h-[400px] object-none z-10" src="/assets/video-content.svg" alt="" />
                     </div>
                 </section>
             </div>

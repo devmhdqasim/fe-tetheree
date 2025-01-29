@@ -18,7 +18,7 @@ export const Logo = ({ className, children, ...props }) => {
 
 export const H1 = ({ className, children, ...props }) => {
     return (
-        <h1 {...props} className={`${className}  text-white font-bold text-[30px] md:text-[45px] leading-55 md:leading-60`}>
+        <h1 {...props} className={`${className}  text-white font-bold text-[30px] md:text-[45px] leading-10 sm:leading-55 md:leading-60`}>
             {children}
         </h1>
     )
@@ -42,7 +42,7 @@ export const H3 = ({ className, children, ...props }) => {
 
 export const H4 = ({ className, children, ...props }) => {
     return (
-        <h4 {...props} className={`${className} font-normal text-sm md:text-24  text-white leading-40`}>
+        <h4 {...props} className={`${className} font-normal text-sm md:text-24  text-white leading-7`}>
             {children}
         </h4>
     )
@@ -58,7 +58,7 @@ export const H5 = ({ className, children, ...props }) => {
 
 export const H6 = ({ className, children, ...props }) => {
     return (
-        <h5 {...props} className={`${className} text-white leading-9 text-base md:text-sm`}>
+        <h5 {...props} className={`${className} text-white leading-7 sm:leading-9 text-base md:text-sm`}>
             {children}
         </h5>
     )
