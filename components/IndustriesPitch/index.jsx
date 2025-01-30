@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { Tab, H6, H3, Button } from "../Typography";
+import { Tab, H2, H6, H3, Button } from "../Typography";
 import { IndustryWrapper } from '../../components/Section';
 
 const Index = () => {
