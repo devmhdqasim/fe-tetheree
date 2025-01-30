@@ -80,19 +80,21 @@ const Index = () => {
             <div className='relative'>
                 <div className="relative">
                     <IndustryWrapper
-                        titleClassName='text-theme !text-center mb-36'
-                        title={selectedTab ?? 'Customized Integrations'}
+                        title={false}
                         subTitleClassName={'!text-center'}
                         containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto'}
                         btnClassName='bg-[#E95018] text-white uppercase md:h-72'
                     >
-                        <section className='flex items-baseline justify-center gap-16 flex-wrap mx-auto mb-54 md:mb-99'>
+                        <section className='flex items-baseline justify-center gap-16 flex-wrap mx-auto mb-36 md:mb-54'>
                             {['Customized Automations', 'Customized Integration', 'SaaS Offerings']?.map((item, _index) => (
                                 <Tab onClick={() => setSelectedTab(item)} key={_index} className={`${selectedTab == item && '!bg-[#E95018] !border-[#E95018]'} flex-grow border border-[#6F6F6F] hover:!bg-[#E95018] hover:!border-[#E95018] rounded-none`}>
                                     <span className={`${selectedTab == item && '!text-white'} hover:!text-white text-[#FAFAFA] font-normal text-md`}>{item}</span>
                                 </Tab>
                             ))}
                         </section>
+
+                        <H2 className={`!text-center font-semibold mb-36`}>{selectedTab ?? 'Customized Integrations'}</H2>
+
                         {selectedTab == 'Customized Automations' && (
                             <H6 className={'text-center mb-36 md:mb-55'}>Streamline your workflows with our fully customizable automation solutions. We automate and monitor tasks, ensuring efficiency at every step. From routine tasks to complex processes, our automation tools are designed to keep your business running smoothly and efficiently.</H6>
                         )}
