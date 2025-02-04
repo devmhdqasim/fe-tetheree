@@ -27,7 +27,7 @@ const Index = ({
                     <ul className="flex flex-col items-center gap-30 pt-64">
                         {navItems?.map((item, _index) => (
                             <li key={_index} className='text-sm text-white font-medium transition-all cursor-pointer hover:text-[#E95018]'>
-                                <Link href={item?.link}>
+                                <Link className='whitespace-nowrap' href={item?.link}>
                                     {item?.name}
                                 </Link>
                             </li>

@@ -41,13 +41,13 @@ const Index = () => {
             <Link href={'/'}>
               <img className="h-26 md:h-28" src="/assets/svg/logo-nav.svg" alt="Logo" />
             </Link>
-            <ul className="hidden lg:flex items-center gap-28 ml-auto">
+            <ul className="hidden lg:flex items-center gap-20 md:gap-28 ml-auto">
               {navItems?.map((item, index) => (
                 <li
                   key={index}
-                  className="nav-link text-base text-white font-normal transition-all cursor-pointer hover:text-[#E95018]"
+                  className="nav-link text-2xs md:text-base text-white font-normal transition-all cursor-pointer hover:text-[#E95018]"
                 >
-                  <Link href={item?.link}>{item?.name}</Link>
+                  <Link className='whitespace-nowrap' href={item?.link}>{item?.name}</Link>
                 </li>
               ))}
             </ul>
