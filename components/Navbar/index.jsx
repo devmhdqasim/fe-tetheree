@@ -9,9 +9,10 @@ const Index = () => {
 
   const navItems = [
     { name: 'Services', link: '/services' },
-    { name: 'Portfolio', link: '/our-portfolio' },
-    { name: 'Case Studies', link: '/our-blogs' },
-    { name: 'About Us', link: '/about-us' },
+    { name: 'Products', link: '/our-portfolio' },
+    { name: 'Industries', link: '/our-blogs' },
+    { name: 'Automations', link: '/about-us' },
+    { name: 'Integrations', link: '/our-portfolio' },
     { name: 'Contact Us', link: '/lets-talk' },
   ];
 
