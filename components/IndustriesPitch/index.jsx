@@ -89,9 +89,9 @@ const Index = () => {
                 </IndustryWrapper>
             </div>
 
-            <div className='relative'>
-                <div className="relative">
-                    <div id="products">
+            <div id="products">
+                <div className='relative'>
+                    <div className="relative">
                         <IndustryWrapper
                             title={false}
                             subTitleClassName={'!text-center'}
@@ -135,35 +135,35 @@ const Index = () => {
                                 </div>
                             )}
                         </IndustryWrapper>
-                    </div>
 
-                    {selectedTab == 'Customized Automations' && (
-                        <IndustryWrapper
-                            titleClassName='text-theme !text-center mb-36'
-                            title='Industries'
-                            subTitleClassName={'!text-center'}
-                            containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto -mt-36'}
-                            subTitle='Our automation solutions are tailor-made for a variety of industries, ensuring that you get the most out of your operations:'
-                            btnClassName='bg-[#E95018] text-white uppercase md:h-72'
-                        >
-                            <div className=''>
-                                <section className='flex items-stretch justify-center gap-16 flex-wrap lg:flex-nowrap mx-auto mb-99'>
-                                    {['Supply Chain', 'Media', 'Coaching', 'Education']?.map((item, _index) => (
-                                        <Tab key={_index} className={`!min-w-[240px] ${false && '!bg-[#E95018] !border-white !text-white'} !h-auto flex-grow hover:!bg-[#E95018] hover:!border-white hover:!text-white pt-40 pb-26`}>
-                                            <img className='mb-24' src={`/assets/industries/industry-${++_index}.svg`} alt="" />
-                                            <span className={`text-[#FAFAFA] font-normal text-center text-md`}>{item}</span>
-                                        </Tab>
-                                    ))}
-                                </section>
-                            </div>
-                        </IndustryWrapper>
-                    )}
+                        {selectedTab == 'Customized Automations' && (
+                            <IndustryWrapper
+                                titleClassName='text-theme !text-center mb-36'
+                                title='Industries'
+                                subTitleClassName={'!text-center'}
+                                containerClassName={'max-w-full lg:max-w-[1000px] flex justify-center !mx-auto -mt-36'}
+                                subTitle='Our automation solutions are tailor-made for a variety of industries, ensuring that you get the most out of your operations:'
+                                btnClassName='bg-[#E95018] text-white uppercase md:h-72'
+                            >
+                                <div className=''>
+                                    <section className='flex items-stretch justify-center gap-16 flex-wrap lg:flex-nowrap mx-auto mb-99'>
+                                        {['Supply Chain', 'Media', 'Coaching', 'Education']?.map((item, _index) => (
+                                            <Tab key={_index} className={`!min-w-[240px] ${false && '!bg-[#E95018] !border-white !text-white'} !h-auto flex-grow hover:!bg-[#E95018] hover:!border-white hover:!text-white pt-40 pb-26`}>
+                                                <img className='mb-24' src={`/assets/industries/industry-${++_index}.svg`} alt="" />
+                                                <span className={`text-[#FAFAFA] font-normal text-center text-md`}>{item}</span>
+                                            </Tab>
+                                        ))}
+                                    </section>
+                                </div>
+                            </IndustryWrapper>
+                        )}
 
-                    <div className='bg-theme w-full pb-99'>
-                        <div className='w-[320px] flex h-1 bg-[#E95018] mx-auto' />
+                        <div className='bg-theme w-full pb-99'>
+                            <div className='w-[320px] flex h-1 bg-[#E95018] mx-auto' />
+                        </div>
                     </div>
+                    <img className='absolute top-0 left-2/4 -translate-x-2/4 pointer-events-none' src="/assets/homepage-tabs-blur.svg" alt="" />
                 </div>
-                <img className='absolute top-0 left-2/4 -translate-x-2/4 pointer-events-none' src="/assets/homepage-tabs-blur.svg" alt="" />
             </div>
         </>
     )
