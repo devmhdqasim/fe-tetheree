@@ -8,9 +8,27 @@
     user-select: none;
     font-family: 'Poppins', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: #000;
   }
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  user-select: none;
+}
+
+[data-scroll-container] {
+  min-height: 100vh;
+}
+
 .list-landing svg {
     stroke: #052F74 !important;
 }

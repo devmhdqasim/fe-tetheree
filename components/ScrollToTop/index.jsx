@@ -1,35 +1,43 @@
-import React, { useState } from "react";
-import ArrowUp from '../Typography/ArrowUp'
+import { useState, useEffect } from 'react';
+import { FiArrowUp } from 'react-icons/fi'; // Arrow up icon
 
-const Index = () => {
-    const [visible, setVisible] = useState(false);
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-    const toggleVisible = () => {
-        const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 300) {
-            setVisible(true);
-        } else if (scrolled <= 300) {
-            setVisible(false);
-        }
+  // Detect scroll position and toggle visibility of the button
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true); // Show button if scrolled more than 300px
+      } else {
+        setIsVisible(false); // Hide button if less than 300px
+      }
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
     };
+  }, []);
 
-    window && window?.addEventListener("scroll", toggleVisible);
+  // Scroll smoothly to top
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-    return (
-        <div className="scroll-top-container">
-            <ArrowUp
-                onClick={scrollToTop}
-                style={{ display: visible ? "inline" : "none" }}
-            />
-        </div>
-    );
+  return (
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-8 right-8 z-50 flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg transition-all duration-300 ${
+        isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
+      }`}
+      aria-label="Scroll to top"
+    >
+      <FiArrowUp className="w-6 h-6" />
+    </button>
+  );
 };
 
-export default Index;
+export default ScrollToTop;

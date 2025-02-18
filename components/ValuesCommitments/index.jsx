@@ -1,3 +1,4 @@
+import { IndustryWrapper } from '../../components/Section';
 import { Tab, H1, H2, H3, H4, H5, H6, Paragraph, Button } from "../../components/Typography";
 
 const Index = () => {
@@ -17,6 +18,34 @@ const Index = () => {
                         </Tab>
                     ))}
                 </section>
+                <IndustryWrapper
+                    titleClassName='text-theme'
+                    containerClassName='!pt-26'
+                    wrapperClassName='!bg-transparent'
+                    btnClassName='bg-[#E95018] text-white uppercase md:h-72'
+                >
+                    <section className='flex items-baseline gap-16 flex-wrap mb-30'>
+                        {['Enterprise Resource Planning', 'Customer Relationship Managment', 'Content Managment System', 'Transportation Managment System', 'Learning Managment System']?.map((item, _index) => {
+                            let word = item?.trim()?.split(" ")
+                            return (
+                                <Tab key={_index} className={`${true && 'hover:!bg-[#E95018] hover:!text-white'}`}>
+                                    <span>{word?.[0]}</span>
+                                    <span>{word?.slice(1)?.join(" ")}</span>
+                                </Tab>
+                            )
+                        })}
+                    </section>
+                    <div className='mb-[56px]'>
+                        <H6 className='font-normal w-full text-left mb-30'>Additionally, we offer specialized platforms for diverse needs:</H6>
+                        <section className='flex items-baseline gap-16 flex-wrap'>
+                            {['Coaching Platform', 'Property Management Platform', 'Media Platform']?.map((item, _index) => (
+                                <Tab key={_index} className={`${true && 'hover:!bg-[#E95018] hover:!text-white'}`}>
+                                    <span>{item}</span>
+                                </Tab>
+                            ))}
+                        </section>
+                    </div>
+                </IndustryWrapper>
                 <section className='flex flex-col md:flex-row items-stretch justify-between gap-24 md:gap-36'>
                     {[
                         { title: 'Our values ​​and commitments', subTitle: 'Unlock the future of efficiency with our cutting-edge automation solutions. We specialize in connecting people through innovative processes, allowing humans to focus on what they do best.' },

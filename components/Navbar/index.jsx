@@ -5,37 +5,35 @@ import { Logo, Button } from "../Typography";
 
 const Index = () => {
   const [toggle, setToggle] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { name: 'Services', link: '/services' },
-    { name: 'Products', link: '/our-portfolio' },
-    { name: 'Industries', link: '/our-blogs' },
-    { name: 'Automations', link: '/about-us' },
-    { name: 'Integrations', link: '/our-portfolio' },
-    { name: 'Contact Us', link: '/lets-talk' },
+    { name: 'Services', link: '/services'},
+    { name: 'Industries', sectionHref: "industries"  },
+    { name: 'Products', sectionHref: "products"  },
+    { name: 'Automations', sectionHref: "products"  },
+    { name: 'Integrations', sectionHref: "products"  },
+    { name: 'About Us', link: '/about-us' },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const ScrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      // Calculate the offset (e.g., height of the fixed navbar)
+      const headerHeight = document.querySelector("nav")?.offsetHeight || 0;
+  
+      window.scrollTo({
+        top: section.offsetTop - headerHeight, // Offset scroll position
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 bg-theme transition-all duration-300 ${
-          isScrolled ? 'shadow-lg py-16' : 'py-20 lg:py-28'
-        }`}
-      >
+        data-scroll-section data-scroll-speed="0.8"
+        className={`sticky top-0 z-50 bg-theme transition-all duration-300 py-20 lg:py-28 
+          `}>
         <div className="container mx-auto px-20 md:px-24 lg:px-32">
           <div className="flex items-center justify-between gap-20">
             <Link href={'/'}>
@@ -47,16 +45,18 @@ const Index = () => {
                   key={index}
                   className="nav-link text-2xs md:text-base text-white font-normal transition-all cursor-pointer hover:text-[#E95018]"
                 >
-                  <Link className='whitespace-nowrap' href={item?.link}>{item?.name}</Link>
+                  {item?.link ? <Link className='whitespace-nowrap' href={item?.link}>{item?.name}</Link>
+                  : <a className='whitespace-nowrap' onClick={() => ScrollToSection(item?.sectionHref)}>{item?.name}</a>}
                 </li>
               ))}
             </ul>
             <div className="flex items-center">
-              <span className="inline-block xs:hidden text-2xs text-white font-medium transition-all cursor-pointer hover:text-[#E95018] mr-6">
+              <span onClick={() => navigate('/lets-talk')} className="inline-block xs:hidden text-2xs text-white font-medium transition-all cursor-pointer hover:text-[#E95018] mr-6">
                 Get Started
               </span>
               <Button
                 arrow={false}
+                onClick={() => navigate('/lets-talk')}
                 className="hidden xs:block !h-40 lg:!h-60 md:!text-base ml-16 mr-6 px-26 md:px-36"
               >
                 Get Started

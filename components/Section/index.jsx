@@ -43,10 +43,10 @@ export const PitchPoint = ({ number, title, subTitle, subTitleClassName, titleCl
     )
 }
 
-export const IndustryWrapper = ({ title, subTitle, subTitleClassName, btnTitle, titleClassName, containerClassName, btnClassName, children }) => {
+export const IndustryWrapper = ({ title, subTitle, subTitleClassName, btnTitle, titleClassName, wrapperClassName, containerClassName, btnClassName, children }) => {
 
     return (
-        <div className='bg-theme'>
+        <div className={`${wrapperClassName} bg-theme`}>
             <div className="container flex flex-col mx-auto">
                 <section className={`${containerClassName} w-full flex flex-col justify-center py-46 px-20`}>
                     {title && <H2 className={`${titleClassName} font-semibold text-left mb-8`}>{title}</H2>}
