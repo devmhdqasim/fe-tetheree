@@ -31,7 +31,6 @@ const Index = () => {
   return (
     <>
       <nav
-        data-scroll-section data-scroll-speed="0.8"
         className={`sticky top-0 z-50 bg-theme transition-all duration-300 py-20 lg:py-28 
           `}>
         <div className="container mx-auto px-20 md:px-24 lg:px-32">

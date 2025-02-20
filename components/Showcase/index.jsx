@@ -8,8 +8,8 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                 <Navbar />
                 <div className="container mx-auto">
                     <section className='w-full flex flex-col md:flex-row justify-between py-76 md:pt-[200px] md:pb-[240px] gap-72 md:gap-32 px-20 md:px-54'>
-                        <div data-scroll-section data-scroll-speed="0.5" className='relative'>
-                                <div className='relative z-10'>
+                        <div className='relative'>
+                        <div className='relative z-10'>
                             <H5 className='hidden md:block text-white font-medium mb-16'>{supTitle ?? 'We Build Solution for the industry'}</H5>
                             <H1 data-scroll className='text-left pr-0 lg:pr-64 mb-16'>{title ?? `Custom software for team collaboration`}</H1>
                             <H6 className='w-full text-left font-normal text-white pr-0 lg:pr-64 mb-36 md:mb-64'>{subTitle ?? 'We specialize in connecting people through innovative processes, allowing humans to focus on what they do best.'}</H6>
@@ -17,11 +17,11 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                                 <Button className='!bg-[#E95018] text-white !h-60 lg:!h-72 uppercase md:!text-2xs px-26 md:px-36'>Get Started</Button>
                                 {secondaryBtn && <Button className='!bg-transparent text-white !h-60 lg:!h-72 uppercase md:!text-base px-26 md:px-36'>About Us</Button>}
                             </div>
-                            </div>
+                        </div>
                             <img className="w-fit absolute top-2/4 -translate-y-2/4 object-cover -z-[1]" src="/assets/header-blur.png" alt="" />
                         </div>
 
-                        {headerImg && <div data-scroll-section data-scroll-speed="0.5" className='w-full relative max-w-full h-full'>
+                        {headerImg && <div className='w-full relative max-w-full h-full'>
                             <img className="w-full relative max-w-full h-full max-h-[400px] object-contain z-10" src="/assets/header.svg" alt="" />
                         </div>}
 
@@ -63,7 +63,7 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                     </section>
                 </div>
             </div>
-            <video className='w-full h-full absolute left-0 bottom-0 object-cover' controls={false} autoPlay={true} muted={true}>
+            <video className='w-full h-full absolute left-0 bottom-0 object-cover' controls={false} loop={true} autoPlay={true} muted={true}>
                 <source src="/assets/header-graphic.mp4" type="video/mp4" />
             </video>
         </header>
