@@ -10,8 +10,8 @@ const Index = () => {
     { name: 'Services', link: '/services'},
     { name: 'Industries', sectionHref: "industries"  },
     { name: 'Products', sectionHref: "products"  },
-    { name: 'Automations', sectionHref: "products"  },
-    { name: 'Integrations', sectionHref: "products"  },
+    { name: 'Automations', sectionHref: "automations"  },
+    { name: 'Integrations', sectionHref: "integrations"  },
     { name: 'About Us', link: '/about-us' },
   ];
 
