@@ -30,9 +30,9 @@ const Index = () => {
 
   return (
     <>
-      <nav
-        className={`sticky top-0 z-50 bg-theme transition-all duration-300 py-20 lg:py-28 
-          `}>
+    <nav
+      className="sticky top-0 z-50 bg-theme transition-all duration-300 py-5 lg:py-7 shadow-md"
+    >
         <div className="container mx-auto px-20 md:px-24 lg:px-32">
           <div className="flex items-center justify-between gap-20">
             <Link href={'/'}>

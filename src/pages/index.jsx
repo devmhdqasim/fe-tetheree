@@ -11,8 +11,8 @@ const Index = () => {
 
   return (
     <>
-      <main ref={scrollRef} data-scroll-container>
-        <div data-scroll-section>
+      {/* <main ref={scrollRef} data-scroll-container>
+        <div data-scroll-section> */}
           <Showcase headerImg secondaryBtn />
           <IndustriesWrapper />
           <PitchPointsWrapper />
@@ -32,8 +32,8 @@ const Index = () => {
 
           <VideoContent />
           <Footer />
-        </div>
-      </main>
+        {/* </div>
+      </main> */}
     </>
   );
 };

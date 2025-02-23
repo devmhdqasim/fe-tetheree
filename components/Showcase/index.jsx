@@ -3,9 +3,10 @@ import { H1, H4, H5, H6, Caption, Button } from "../Typography";
 
 const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, secondaryBtn = false }) => {
     return (
+        <>
+        <Navbar />
         <header className="bg-theme relative">
             <div className='relative z-10'>
-                <Navbar />
                 <div className="container mx-auto">
                     <section className='w-full flex flex-col md:flex-row justify-between py-76 md:pt-[200px] md:pb-[240px] gap-72 md:gap-32 px-20 md:px-54'>
                         <div className='relative'>
@@ -67,6 +68,7 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                 <source src="/assets/header-graphic.mp4" type="video/mp4" />
             </video>
         </header>
+        </>
     )
 }
 
