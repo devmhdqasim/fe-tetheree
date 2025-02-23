@@ -50,16 +50,18 @@ const Index = () => {
               ))}
             </ul>
             <div className="flex items-center">
-              <span onClick={() => navigate('/lets-talk')} className="inline-block xs:hidden text-2xs text-white font-medium transition-all cursor-pointer hover:text-[#E95018] mr-6">
-                Get Started
-              </span>
-              <Button
-                arrow={false}
-                onClick={() => navigate('/lets-talk')}
-                className="hidden xs:block !h-40 lg:!h-60 md:!text-base ml-16 mr-6 px-26 md:px-36"
-              >
-                Get Started
-              </Button>
+              <Link href='/lets-talk'>
+                <span className="inline-block xs:hidden text-2xs text-white font-medium transition-all cursor-pointer hover:text-[#E95018] mr-6">
+                  Get Started
+                </span>
+              </Link>
+              <Link href='/lets-talk'>
+                <Button
+                  arrow={false}
+                  className="hidden xs:block !h-40 lg:!h-60 md:!text-base ml-16 mr-6 px-26 md:px-36">
+                  Get Started
+                </Button>
+              </Link>
               <div
                 onClick={() => setToggle(!toggle)}
                 className="bg-transparent text-white grid lg:hidden place-content-center w-40 h-40 rounded-full cursor-pointer"
