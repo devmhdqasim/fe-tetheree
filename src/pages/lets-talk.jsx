@@ -9,8 +9,9 @@ const Index = () => {
   const { scrollRef } = useLocomotiveScroll();
 
   return (
-    <main ref={scrollRef} data-scroll-container>
-      <div data-scroll-section>
+    <>
+    {/* <main ref={scrollRef} data-scroll-container>
+      <div data-scroll-section> */}
         <Showcase
           contactForm
           supTitle={'Ready to work with us?'}
@@ -27,8 +28,9 @@ const Index = () => {
           </div>
         </section>
         <Footer />
-      </div>
-    </main>
+      {/* </div>
+    </main> */}
+    </>
   )
 }
 

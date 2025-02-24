@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import Sidebar from '../Sidebar';
+import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Logo, Button } from "../Typography";
 
 const Index = () => {
+  const router = useRouter();
   const [toggle, setToggle] = useState(false);
 
   const navItems = [
@@ -16,15 +18,19 @@ const Index = () => {
   ];
 
   const ScrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      // Calculate the offset (e.g., height of the fixed navbar)
-      const headerHeight = document.querySelector("nav")?.offsetHeight || 0;
-  
-      window.scrollTo({
-        top: section.offsetTop - headerHeight, // Offset scroll position
-        behavior: "smooth",
-      });
+    if (router.pathname == '/') {
+      const section = document.getElementById(id);
+      if (section) {
+        // Calculate the offset (e.g., height of the fixed navbar)
+        const headerHeight = document.querySelector("nav")?.offsetHeight || 0;
+    
+        window.scrollTo({
+          top: section.offsetTop - headerHeight, // Offset scroll position
+          behavior: "smooth",
+        });
+      }
+    } else {
+      router.push('/');
     }
   };
 

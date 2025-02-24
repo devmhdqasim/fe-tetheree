@@ -7,8 +7,9 @@ const Index = () => {
   const { scrollRef } = useLocomotiveScroll();
 
   return (
-    <main ref={scrollRef} data-scroll-container>
-      <div data-scroll-section>
+    <>
+    {/* <main ref={scrollRef} data-scroll-container>
+      <div data-scroll-section> */}
         <Showcase
           supTitle={'Who we are'}
           title={'Services'}
@@ -16,8 +17,9 @@ const Index = () => {
         />
         <ValuesCommitments />
         <Footer />
-      </div>
-    </main>
+      {/* </div>
+    </main> */}
+    </>
   )
 }
 
