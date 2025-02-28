@@ -13,7 +13,7 @@ const Index = () => {
     <>
       {/* <main ref={scrollRef} data-scroll-container>
         <div data-scroll-section> */}
-          <Showcase headerImg secondaryBtn />
+          <Showcase headerImg secondaryBtn supTitle={'We Build Solution for the industry'} />
           <IndustriesWrapper />
           <PitchPointsWrapper />
 

@@ -3,17 +3,19 @@ import Sidebar from '../Sidebar';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Logo, Button } from "../Typography";
+import { usePathname } from "next/navigation";
 
 const Index = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [toggle, setToggle] = useState(false);
 
   const navItems = [
     { name: 'Services', link: '/services'},
-    { name: 'Industries', sectionHref: "industries"  },
-    { name: 'Products', sectionHref: "products"  },
-    { name: 'Automations', sectionHref: "automations"  },
-    { name: 'Integrations', sectionHref: "integrations"  },
+    { name: 'Industries', link: "/industries"  },
+    { name: 'Products', link: "/products"  },
+    { name: 'Automations', link: "/automations"  },
+    { name: 'Integrations', link: "/integrations"  },
     { name: 'About Us', link: '/about-us' },
   ];
 
@@ -48,10 +50,9 @@ const Index = () => {
               {navItems?.map((item, index) => (
                 <li
                   key={index}
-                  className="nav-link text-2xs md:text-base text-white font-normal transition-all cursor-pointer hover:text-[#E95018]"
+                  className={`${pathname === item?.link && '!text-[#E95018]'} nav-link text-2xs md:text-base text-white font-normal transition-all cursor-pointer hover:text-[#E95018]`}
                 >
-                  {item?.link ? <Link className='whitespace-nowrap' href={item?.link}>{item?.name}</Link>
-                  : <a className='whitespace-nowrap' onClick={() => ScrollToSection(item?.sectionHref)}>{item?.name}</a>}
+                  <Link className='whitespace-nowrap' href={item?.link}>{item?.name}</Link>
                 </li>
               ))}
             </ul>
@@ -70,7 +71,7 @@ const Index = () => {
               </Link>
               <div
                 onClick={() => setToggle(!toggle)}
-                className="bg-transparent text-white grid lg:hidden place-content-center w-40 h-40 rounded-full cursor-pointer"
+                className="bg-white text-[#E95018] transition-all hover:bg-[#E95018] hover:text-white grid lg:hidden place-content-center w-36 h-36 rounded-0 cursor-pointer"
               >
                 <svg
                   width="18"

@@ -1,7 +1,7 @@
 import Navbar from '../Navbar'
 import { H1, H4, H5, H6, Caption, Button } from "../Typography";
 
-const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, secondaryBtn = false }) => {
+const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, primaryBtn = true, secondaryBtn = false }) => {
     return (
         <>
         <Navbar />
@@ -11,16 +11,18 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, seco
                     <section className='w-full flex flex-col md:flex-row justify-between py-76 md:pt-[200px] md:pb-[240px] gap-72 md:gap-32 px-20 md:px-54'>
                         <div className='relative'>
                         <div className='relative z-10'>
-                            <H5 className='hidden md:block text-white font-medium mb-16'>{supTitle ?? 'We Build Solution for the industry'}</H5>
+                            {supTitle && <H5 className='hidden md:block text-white font-medium mb-16'>{supTitle ?? 'We Build Solution for the industry'}</H5>}
                             <H1 data-scroll className='text-left pr-0 lg:pr-64 mb-16'>{title ?? `Custom software for team collaboration`}</H1>
                             <H6 className='w-full text-left font-normal text-white pr-0 lg:pr-64 mb-36 md:mb-64'>{subTitle ?? 'We specialize in connecting people through innovative processes, allowing humans to focus on what they do best.'}</H6>
                             <div className='flex flex-wrap items-baseline gap-20 md:gap-3'>
-                                <Button className='!bg-[#E95018] text-white !h-60 lg:!h-72 uppercase md:!text-2xs px-26 md:px-36'>Get Started</Button>
+                                {primaryBtn && <Button className='!bg-[#E95018] text-white !h-60 lg:!h-72 uppercase md:!text-2xs px-26 md:px-36'>Get Started</Button>}
                                 {secondaryBtn && <Button className='!bg-transparent text-white !h-60 lg:!h-72 uppercase md:!text-base px-26 md:px-36'>About Us</Button>}
                             </div>
                         </div>
                             <img className="w-fit absolute top-2/4 -translate-y-2/4 object-cover -z-[1]" src="/assets/header-blur.png" alt="" />
                         </div>
+
+                        {!headerImg && !contactForm && <div className='w-2/6 shrink-0' />}
 
                         {headerImg && <div className='w-full relative max-w-full h-full'>
                             <img className="w-full relative max-w-full h-full max-h-[400px] object-contain z-10" src="/assets/header.svg" alt="" />
