@@ -39,21 +39,18 @@ const Index = () => {
           subTitle='Our expertise spans a broad spectrum of industries, ensuring that no matter your field, we have the tools to drive your success:'
         >
           <div className='mb-30'>
-            <section className='flex items-stretch gap-16 flex-wrap xl:flex-nowrap'>
+            <section className='flex flex-col items-stretch gap-16 flex-wrap xl:flex-nowrap'>
               {industryItems?.map((item, _index) => (
-                <Tab key={_index} onClick={() => setSelectedIndustriesTab(item)} className={`${item?.title == selectedIndustriesTab?.title && '!bg-[#E95018] !border-white'} group border border-[#6F6F6F] hover:!bg-[#E95018] hover:!border-white rounded-none`}>
-                  <span className={`${item?.title == selectedIndustriesTab?.title && '!text-white'} text-[#6F6F6F] group-hover:text-white font-semibold text-sm xl:text-base`}>{item?.title}</span>
-                </Tab>
+                <section className='bg-[#121212] border border-[#282828] flex flex-col lg:flex-row items-center justify-between gap-36 md:gap-99 px-24 md:px-72 pt-36 pb-70'>
+                  <div>
+                    <H3 className={'!font-semibold mb-24'}>{item?.title}</H3>
+                    <H6>Streamline your <span className='lowercase'>{item?.title}</span> operations with our AI-powered automation solutions. We specialize in optimizing supply chains, reducing costs, and improving efficiency.</H6>
+                  </div>
+                  <img className='w-full md:w-full max-h-[360px] object-contain px-20 md:pr-0' src={`/assets/globe${item?.imgUrl}`} alt="" />
+                </section>
               ))}
             </section>
           </div>
-          <section className='bg-[#121212] flex flex-col lg:flex-row items-center justify-between gap-36 md:gap-99 px-24 md:px-72 pt-36 pb-70'>
-            <div>
-              <H3 className={'!font-semibold mb-24'}>{selectedIndustriesTab?.title}</H3>
-              <H6>Streamline your <span className='lowercase'>{selectedIndustriesTab?.title}</span> operations with our AI-powered automation solutions. We specialize in optimizing supply chains, reducing costs, and improving efficiency.</H6>
-            </div>
-            <img className='w-full md:w-full max-h-[360px] object-contain px-20 md:pr-0' src={`/assets/globe${selectedIndustriesTab?.imgUrl}`} alt="" />
-          </section>
         </IndustryWrapper>
       </div>
       <Footer />
