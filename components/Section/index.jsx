@@ -13,7 +13,7 @@ export const FeaturedProduct = ({ containerClassName, title, subTitle, btnClassN
     )
 }
 
-export const PitchPoint = ({ number, title, subTitle, subTitleClassName, titleClassName, containerClassName }) => {
+export const PitchPoint = ({ number, title, subTitle, subTitleClassName, titleClassName, containerClassName, icons }) => {
 
     return (
         <div className='bg-theme'> 
@@ -27,11 +27,11 @@ export const PitchPoint = ({ number, title, subTitle, subTitleClassName, titleCl
                         </div>
                     </div>
                     <div className='flex items-stretch justify-center xl:justify-end transition-all duration-200 opacity-100 xl:opacity-0 xl:group-hover:opacity-100 mt-0 xl:mt-34'>
-                        {[...Array(3)]?.map((item, _index) => (
-                            <span className={`${_index == 0 ? '-right-32' : _index == 1 ? '-right-16' : 'right-0'} relative aspect-square w-full md:w-180 md:h-180 flex items-center justify-center border border-[#2D2D2F] transition-all group-hover:border-[#4e4e4e] rounded-full p-16`}>
+                        {icons?.map((item, _index) => (
+                            <span key={_index} className={`${_index == 0 ? '-right-32' : _index == 1 ? '-right-16' : 'right-0'} relative aspect-square w-full md:w-180 md:h-180 flex items-center justify-center border border-[#2D2D2F] transition-all group-hover:border-[#4e4e4e] rounded-full p-16`}>
                                 {_index == 1 && <img className='absolute top-2/4 -translate-y-2/4 left-0' src="/assets/points/arrow-left.svg" alt="" />}
                                 <div className={`${_index == 1 && 'bg-[#0D0D0F] group-hover:bg-[#2d2d2d]'} w-3/5 sm:w-full h-full flex items-center justify-center transition-all rounded-full`}>
-                                    <img src={`/assets/points/point-${_index + 1}.svg`} alt="" />
+                                    <img src={`/assets/${item}`} alt="" />
                                 </div>
                                 {_index == 1 && <img className='absolute top-2/4 -translate-y-2/4 right-0' src="/assets/points/arrow-right.svg" alt="" />}
                             </span>
