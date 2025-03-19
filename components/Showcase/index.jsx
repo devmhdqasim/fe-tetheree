@@ -66,11 +66,11 @@ const Index = ({ supTitle, title, subTitle, headerImg = false, contactForm, prim
                     </section>
                 </div>
             </div>
-            <img className='w-full h-full absolute left-0 bottom-0 object-cover' src="/assets/header-graphic.gif" alt="" />
+            {/* <img className='w-full h-full absolute left-0 bottom-0 object-cover' src="/assets/header-graphic.gif" alt="" /> */}
 
-            {/* <video className='w-full h-full absolute left-0 bottom-0 object-cover' controls={false} loop={true} autoPlay={true} muted={true}>
+            <video className='w-full h-full absolute left-0 bottom-0 object-cover' controls={false} loop={true} autoPlay={true} muted={true}>
                 <source src="/assets/header-graphic.mp4" type="video/mp4" />
-            </video> */}
+            </video>
         </header>
         </>
     )
