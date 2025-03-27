@@ -22,18 +22,18 @@ export const PitchPoint = ({ number, title, subTitle, subTitleClassName, titleCl
                     <div className='flex flex-col md:flex-row items-start gap-18 md:gap-40 mb-8'>
                         <span className='block w-full md:w-auto !text-[#F3722C] text-24 font-normal text-center md:text-left mt-12'>{number}</span>
                         <div className='md:w-4/5'>
-                            <H2 className={`${titleClassName} font-semibold text-center md:text-left`}>{title}</H2>
+                            <H2 className={`${titleClassName} text-white group-hover:text-[#F3722C] font-semibold text-center md:text-left`}>{title}</H2>
                             {subTitle && <H6 className={`${subTitleClassName} lg:group-hover:translate-x-[10%] font-normal text-[12px] text-[#A1A1AA] leading-5 w-full text-center md:text-left transition-all mb-36`}>{subTitle}</H6>}
                         </div>
                     </div>
                     <div className='flex items-stretch justify-center xl:justify-end transition-all duration-200 opacity-100 xl:opacity-0 xl:group-hover:opacity-100 mt-0 xl:mt-34'>
-                        {icons?.map((item, _index) => (
-                            <span key={_index} className={`${_index == 0 ? '-right-32' : _index == 1 ? '-right-16' : 'right-0'} relative aspect-square w-full md:w-180 md:h-180 flex items-center justify-center border border-[#2D2D2F] transition-all group-hover:border-[#4e4e4e] rounded-full p-16`}>
-                                {_index == 1 && <img className='absolute top-2/4 -translate-y-2/4 left-0' src="/assets/points/arrow-left.svg" alt="" />}
-                                <div className={`${_index == 1 && 'bg-[#0D0D0F] group-hover:bg-[#2d2d2d]'} w-3/5 sm:w-full h-full flex items-center justify-center transition-all rounded-full`}>
-                                    <img src={`/assets/${item}`} alt="" />
-                                </div>
-                                {_index == 1 && <img className='absolute top-2/4 -translate-y-2/4 right-0' src="/assets/points/arrow-right.svg" alt="" />}
+                        {[...Array(3)]?.map((item, _index) => (
+                            <span key={_index} className={`${_index == 0 ? '-right-32' : _index == 1 ? '-right-16' : 'right-0'} relative aspect-square w-full md:w-200 md:h-200 flex items-center justify-center border border-[#2D2D2F] transition-all group-hover:border-[#4e4e4e] rounded-full p-16`}>
+                                {_index == 0 && <img className='absolute top-2/4 -translate-y-2/4' src={`/assets/${icons?.left}`} alt="" />}
+                                {_index == 1 && <div className={`${_index == 1 && 'bg-[#0D0D0F] group-hover:bg-[#2d2d2d]'} w-3/5 sm:w-full h-full flex items-center justify-center transition-all rounded-full`}>
+                                    <img src={`/assets/${icons?.middle}`} alt="" />
+                                </div>}
+                                {_index == 2 && <img className='absolute top-2/4 -translate-y-2/4' src={`/assets/${icons?.right}`} alt="" />}
                             </span>
                         ))}
                     </div>
